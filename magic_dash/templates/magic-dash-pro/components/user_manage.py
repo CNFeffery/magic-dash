@@ -102,7 +102,7 @@ def render_user_manage_drawer(visible):
                                         "content": "删除",
                                         "type": "link",
                                         "danger": True,
-                                        "disabled": item["user_name"] == "admin",
+                                        "disabled": item["user_role"] == "admin",
                                     },
                                     "raw": item,
                                 }
