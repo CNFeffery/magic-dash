@@ -1,6 +1,7 @@
 import os
-import click
 import shutil
+
+import click
 
 __version__ = "0.2.8"
 
@@ -11,6 +12,9 @@ BUILTIN_TEMPLATES = {
     },
     "magic-dash-pro": {
         "description": "多页面+用户登录应用模板",
+    },
+    "magic-dash-pro-sqlalchemy": {
+        "description": "多页面+用户登录应用模板（SQLAlchemy版）",
     },
     "simple-tool": {
         "description": "单页面工具应用模板",
