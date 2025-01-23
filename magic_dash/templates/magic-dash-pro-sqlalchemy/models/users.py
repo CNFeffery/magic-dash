@@ -37,12 +37,14 @@ class Users(Base):
     @classmethod
     def get_user(cls, user_id: str):
         """根据用户id查询用户信息"""
-        return cls.query.get(user_id)
+        user = cls.query.get(user_id)
+        return user if user else None
 
     @classmethod
     def get_user_by_name(cls, user_name: str):
         """根据用户名查询用户信息"""
-        return cls.query.filter_by(user_name=user_name).first()
+        user = cls.query.filter_by(user_name=user_name).first()
+        return user if user else None
 
     @classmethod
     def get_all_users(cls):
