@@ -18,7 +18,8 @@ app = dash.Dash(
 server = app.server
 
 # 设置应用密钥
-app.server.secret_key = BaseConfig.app_secret_key
+app.server.config["SECRET_KEY"] = BaseConfig.app_secret_key
+app.server.config["SESSION_COOKIE_NAME"] = BaseConfig.app_session_cookie_name
 
 # 为当前应用添加flask-login用户登录管理
 login_manager = LoginManager()
